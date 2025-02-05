@@ -30,6 +30,10 @@ public class ClienteServicio {
         return clientes;
     }
 
+    public void buscarClientePorCodigo(int codigoC) throws Exception {
+        cd.buscarClientePorCodigo(codigoC);
+    }
+
     public void validacionesNyA(String nombreContacto, String apellidoContacto) throws Exception {
         if (nombreContacto == null) {
             throw new Exception("El nombre del contacto no puede ser nulo.");
@@ -39,7 +43,4 @@ public class ClienteServicio {
         }
     }
 
-    public void buscarClientePorCodigo(int codigoC) throws Exception {
-        cd.buscarClientePorCodigo(codigoC);
-    }
 }
